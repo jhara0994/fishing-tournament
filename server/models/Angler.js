@@ -13,6 +13,9 @@ const anglerSchema = new Schema(
             required: true, 
             trim: true,
         },
+        nickName: {
+            type: String
+        },
         DOB: {
             type: Date,
             default: Date.now
@@ -31,6 +34,9 @@ const anglerSchema = new Schema(
             type: String,
             required: true,
             minlength: 3
+        },
+        status: {
+            type: String,
         },
         fish: {
             type: Schema.Types.ObjectId,
