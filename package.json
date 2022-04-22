@@ -1,0 +1,29 @@
+{
+  "name": "fishing-tournament",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build",
+    "seed": "cd server && npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhara0994/fishing-tournament.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhara0994/fishing-tournament/issues"
+  },
+  "homepage": "https://github.com/jhara0994/fishing-tournament#readme",
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15",
+    "stripe": "^8.216.0"
+  }
+}
