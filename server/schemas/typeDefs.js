@@ -6,7 +6,7 @@ const typeDefs = gql`
         firstName: String
         lastName: String
         nickname: String
-        DOB: Date
+        DOB: String
         username: String
         email: String
         password: String
@@ -20,6 +20,21 @@ const typeDefs = gql`
         weight: Int
         length: Int
         image: String
-        catchTime: Date
+        catchTime: String
     }
-`
+
+    type Query {
+        anglers: Angler
+        fish: [Fish]
+        fishes(_id: ID!): Fish
+    }
+
+    type Mutation {
+        addAngler(firstName: String!, lastName: String!, email: String!, password: String!): Angler
+        updateAngler(firstName: String, lastName: String, email: String, password: String): Angler
+        addFish(type: String!, weight: Int!, length: Int!, image: String!): Fish
+        login(email: String!, password: String!): Angler
+    }
+`;
+
+module.exports = typeDefs

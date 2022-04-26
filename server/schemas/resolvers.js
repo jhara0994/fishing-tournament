@@ -40,7 +40,7 @@ const resolvers = {
             }
         },
         login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
+            const user = await Angler.findOne({ email });
       
             if (!user) {
               throw new AuthenticationError('Incorrect credentials');
