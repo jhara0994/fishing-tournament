@@ -5,14 +5,14 @@ db.once('open', async () => {
     await Fish.deleteMany()
 
     const fish = await Fish.insertMany([
-        { weight: 5, length: 26, catchTime: 1/5/22 },
-        { weight: 7, length: 30, catchTime: 1/5/22 },
-        { weight: 3, length: 22, catchTime: 1/5/22 },
-        { weight: 3.5, length: 23, catchTime: 1/5/22 },
-        { weight: 15, length: 32, catchTime: 1/5/22 },
-        { weight: 16, length: 30, catchTime: 1/5/22 },
-        { weight: 12, length: 26, catchTime: 1/5/22 },
-        { weight: 11, length: 26, catchTime: 1/5/22 },
+        { type: "bass", weight: 5, length: 26, image: "", catchTime: 1/5/22 },
+        { type: "bass", weight: 7, length: 30, image: "", catchTime: 1/5/22 },
+        { type: "bass", weight: 3, length: 22, image: "", catchTime: 1/5/22 },
+        { type: "catfish", weight: 3.5, length: 23, image: "", catchTime: 1/5/22 },
+        { type: "bass", weight: 15, length: 32, image: "", catchTime: 1/4/22 },
+        { type: "brim", weight: 16, length: 30, image: "", catchTime: 1/4/22 },
+        { type: "bass", weight: 12, length: 26, image: "", catchTime: 1/5/22 },
+        { type: "catfish", weight: 11, length: 26, image: "", catchTime: 1/4/22 },
     ])
     console.log('************ FISH DATA SEEDED! ************');
 
