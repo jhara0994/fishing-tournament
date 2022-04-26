@@ -24,7 +24,7 @@ const typeDefs = gql`
     }
 
     type Query {
-        anglers: Angler
+        anglers: [Angler]
         fish: [Fish]
         fishes(_id: ID!): Fish
     }

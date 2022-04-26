@@ -26,7 +26,7 @@ db.once('open', async () => {
             email: "jared@gmail.com", 
             password: "pass123", 
             status: "Amateur",
-            fish: fish[0, 3, 7]._id 
+            fish: [fish[0]._id, fish[3]._id, fish[7]._id]
         },
         { 
             firstName: "Pete", 
@@ -36,7 +36,7 @@ db.once('open', async () => {
             email: "metabit@aol.com", 
             password: "pass123", 
             status: "Pro",
-            fish: fish[1, 2]._id 
+            fish: [fish[1]._id, fish[2]._id]
         },
         { 
             firstName: "Samantha", 

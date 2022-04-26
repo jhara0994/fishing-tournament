@@ -38,10 +38,10 @@ const anglerSchema = new Schema(
         status: {
             type: String,
         },
-        fish: {
+        fish: [{
             type: Schema.Types.ObjectId,
             ref: 'Fish',
-        },
+        }],
     },
     {
         toJSON: {

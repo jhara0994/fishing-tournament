@@ -14,6 +14,7 @@ const resolvers = {
                 return angler
             } else {
                 throw new AuthenticationError('No ID Provided!')
+                // return Angler.find()
             }
         },
     },
