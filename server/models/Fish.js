@@ -16,7 +16,7 @@ const fishSchema = new Schema (
         },
         image: {
             type: String,
-            required: true,
+            
         },
         catchTime: {
             type: Date,
