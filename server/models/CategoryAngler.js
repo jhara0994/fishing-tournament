@@ -1,13 +1,13 @@
 const { Schema, model } = require('mongoose')
 
 const catAnglerSchema = {
-    type: {
+    anglerSkill: {
         type: String, 
         required: true,
     }
 
 }
 
-const CatAngler = model('Angler', catAnglerSchema)
+const CatAngler = model('CatAngler', catAnglerSchema)
 
 module.exports = CatAngler

@@ -36,9 +36,11 @@ const anglerSchema = new Schema(
             minlength: 3
         },
         status: {
-            type: String,
+            type: Schema.Types.ObjectId,
+            ref: 'CatAngler',
+            required: true
         },
-        fish: [{
+        fishCaught: [{
             type: Schema.Types.ObjectId,
             ref: 'Fish',
         }],

@@ -1,13 +1,13 @@
 const { Schema, model } = require('mongoose')
 
 const catFishSchema = {
-    type: {
+    fishType: {
         type: String, 
         required: true,
     }
 
 }
 
-const CatFish = model('Angler', catFishSchema)
+const CatFish = model('CatFish', catFishSchema)
 
 module.exports = CatFish

@@ -2,10 +2,6 @@ const { Schema, model } = require('mongoose')
 
 const fishSchema = new Schema (
     {
-        type: {
-            type: String,
-            required: true,
-        },
         weight: {
             type: Number,
             required: true,
@@ -22,7 +18,12 @@ const fishSchema = new Schema (
             type: Date,
             required: true,
             default: Date.now,
-        }
+        },
+        type: {
+            type: Schema.Types.ObjectId,
+            ref: 'CatFish',
+            required: true,
+        },
     }
 )
 

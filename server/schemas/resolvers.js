@@ -8,15 +8,21 @@ const resolvers = {
         fish: async () => {
             return await Fish.find()
         },
-        anglers: async (parent, {_id}) => {
-            if(_id){
-                const angler = await Angler.findById(_id)
-                return angler
-            } else {
-                throw new AuthenticationError('No ID Provided!')
-                // return Angler.find()
-            }
+        anglers: async () => {
+            return await Angler.find()
+            // if(_id){
+            //     const angler = await Angler.findById(_id)
+            //     return angler
+            // } else {
+            //     throw new AuthenticationError('No ID Provided!')
+            // }
         },
+        fishCaught: async (parent, {angler})=> {
+            const params = {}
+
+        //  Needs function to pull as array of fish objects by anglerId.
+
+        }
     },
     Mutation: {
         addAngler: async(parent, args) => {
